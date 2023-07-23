@@ -5,9 +5,26 @@ const ExpenseForm = () =>{
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
+
+    // Single State
+    
+    // const [userInput, setUserInput] = useState(
+    //     {
+    //         enteredTitle : '',
+    //         enteredAmount : '',
+    //         enteredDate : '',
+    //     }
+    // );
+    
     const titleChnageHandler=(event)=>{
         setEnteredTitle(event.target.value);
+
+        //if you depend on previous state use this approach
+        // setUserInput((prevState) => {
+        //     return {...prevState, enteredTitle: event.target.value};
+        // });
     };
+ 
     const AmountChnageHandler=(event)=>{
         setEnteredAmount(event.target.value);
     };
